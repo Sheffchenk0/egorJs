@@ -3,7 +3,7 @@ let button = document.getElementById('checkButton');
 let done = document.getElementById('done');
 let left = document.getElementById('left');
 let answer = document.getElementById('answer');
-let countLeft = 15;
+let countLeft = 10;
 let countDone = 0;
 let exampleObj = getExample();
 buildExample(exampleObj);
@@ -39,7 +39,6 @@ function resume() {
     let succces = document.getElementById('succces');
     form.classList.add('display-none');
     succes.classList.remove('display-none');
-    console.log('pobae');
   } else {
     exampleObj = getExample();
     buildExample(exampleObj);
@@ -47,8 +46,14 @@ function resume() {
 }
 
 function buildExample(exampleObj) {
-  example.textContent =
-    exampleObj.num[0] + ' ' + exampleObj.operator + ' ' + exampleObj.num[1] + ' = ';
+  if (random(0, 1)) {
+    example.textContent =
+      exampleObj.num[0] + ' ' + exampleObj.operator + ' ' + exampleObj.num[1] + ' = ';
+  } else {
+    example.textContent =
+      exampleObj.num[0] + ' ' + exampleObj.operator + ' ' + exampleObj.num[1] + ' = ';
+  }
+
   done.textContent = 'Решено : ' + countDone;
   left.textContent = 'Осталось : ' + countLeft;
 }
