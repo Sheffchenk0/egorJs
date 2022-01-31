@@ -3,7 +3,7 @@ let button = document.getElementById('checkButton');
 let done = document.getElementById('done');
 let left = document.getElementById('left');
 let answer = document.getElementById('answer');
-let countLeft = 10;
+let countLeft = 1;
 let countDone = 0;
 let exampleObj = getExample();
 buildExample(exampleObj);
